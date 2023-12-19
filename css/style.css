@@ -1,0 +1,21 @@
+.error {
+    border: 1px solid red;
+}
+
+.valid {
+    border: 1px solid green;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+ 
+img {
+    max-width: 100%;
+    height: auto;
+}
