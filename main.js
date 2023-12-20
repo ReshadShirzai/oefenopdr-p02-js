@@ -58,8 +58,8 @@ console.log('Gem. salaris: ' + middleSalary);
  
 highest = 0
 lowest = Infinity
-for (let o = 0; o < work.salaris.length; o++) {
-    const salary = work.salaris[o];
+for (let i = 0; i < work.salaris.length; i++) {
+    const salary = work.salaris[i];
     if(salary > highest){
         highest = salary
     }
