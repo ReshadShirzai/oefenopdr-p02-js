@@ -1,7 +1,7 @@
 let bitcoin = [40604, 40648, 38275, 30386, 39445, 39121, 38494];
-let middle = 0;
 let highest = 0;
 let lowest = 0;
+let total = 0;
 let dates = ["11 dec", "12 dec", "13 dec", "14 dec", "15 dec", "16 dec", "17 dec"];
 const sendButton = document.querySelector(".send");
 const nameButton = document.querySelector("input#nickname");
@@ -9,15 +9,10 @@ const emailButton = document.querySelector("input#email");
 
 // Gemiddeld
 for (let i = 0; i < bitcoin.length; i++) {
-    const btc = bitcoin[i];
-
-    if (btc == middle) {
-        middle = btc
-    }
-    
+    total += bitcoin[i];
 }
-
-console.log("Gemiddelde waarde Bitcoin:", middle);
+const middle = total / bitcoin.length;
+console.log("gemidelde: " + middle);
 
 // Hoogste
 for (let i = 0; i < bitcoin.length; i++) {
