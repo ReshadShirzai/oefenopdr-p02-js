@@ -48,22 +48,36 @@ let work = {
         3450, 2000, 1650, 2200, 1890, 2400, 2300
     ]
 }
-let totalSalary = 0;
-
+let totalSalary = 0
 for (let i = 0; i < work.salaris.length; i++) {
-    totalSalary += work.salaris[i];
+    totalSalary += work.salaris[i]
 }
-
-let middleSalary = totalSalary / work.salaris.length;
-console.log("Totale salaris:", totalSalary);
-console.log("Gem. salaris:", middleSalary);
-
-console.log("Hoogste salaris:", work.salaris[0]);
-console.log("Laagste salaris:", work.salaris[2]);
+let middleSalary = totalSalary / work.salaris.length
+console.log('Totale salaris: ' + totalSalary);
+console.log('Gem. salaris: ' + middleSalary);
+ 
+highest = 0
+lowest = Infinity
+for (let o = 0; o < work.salaris.length; o++) {
+    const salary = work.salaris[o];
+    if(salary > highest){
+        highest = salary
+    }
+    if (salary < lowest){
+        lowest = salary
+    }
+}
+ 
+console.log('Hoogste salaris: ' + highest);
+console.log('Laagste salaris: ' + lowest);
 
 // Opdr 3
+
 sendButton.addEventListener("click", function(){
-    if (nameButton < 3) {
+    const nameButton = document.querySelector("input#nickname");
+    const emailButton = document.querySelector("input#email");
+
+    if (nameButton.value.length < 3) {
         nameButton.classList.add("error");
         nameButton.classList.remove("valid");
     } else {
@@ -72,7 +86,7 @@ sendButton.addEventListener("click", function(){
         console.log(nameButton.value);
     }
 
-    if (emailButton === " ") {
+    if (emailButton.value.length === 0) {
         emailButton.classList.add("error");
         emailButton.classList.remove("valid");
     } else {
